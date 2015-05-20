@@ -1,3 +1,6 @@
 class Show < ActiveRecord::Base
-  has_many :show_listings
+  
+  def show_listings
+    ShowListing.where(show_id: self.id)
+  end
 end

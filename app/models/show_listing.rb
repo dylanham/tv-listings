@@ -1,4 +1,6 @@
 class ShowListing < ActiveRecord::Base
-  belongs_to :show
-  belongs_to :channel
+  
+  def channel
+    Channel.find_by(id: self.channel_id)
+  end
 end
