@@ -47,5 +47,13 @@ feature "user can manage tv listings" do
 
 		expect(page).to have_content("Revenge of the Semicolon is showing on Channel 12 on 11/11/2011")
 		expect(page).to_not have_content("No Show Listings for Revenge of the Semicolon")
+
+		visit root_path
+		expect(page).to have_content("Channel 12")
+
+		click_on "Channel 12"
+
+		expect(current_path).to eq(channel_path(Channel.last))
+		expect(page).to have_content("Revenge of the Semicolon is showing on 11/11/2011")
 	end
 end
