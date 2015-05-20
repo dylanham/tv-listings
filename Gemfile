@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'student_challenges_formatter', git: "git@github.com:gSchool/student-challenges-formatter-gem.git", branch: "rails-formatter"
 gem 'haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

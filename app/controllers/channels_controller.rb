@@ -1,7 +1,11 @@
 class ChannelsController < ApplicationController
-  
+
   def index
-    @shows = Show.all
+    @channels = Channel.all
+  end
+
+  def show
+    @channel = Channel.find(params[:id])
   end
 
   def new

@@ -1,0 +1,3 @@
+- @channel.shows.each do |show|
+  - show.show_listings.each do |listing|
+    = "#{show.name} is showing on #{listing.date}"
