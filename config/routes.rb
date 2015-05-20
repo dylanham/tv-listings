@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'channels#index'
-  resources :channels
-  resources :shows
-  resources :show_listings
+  resources :channels, only: [:index, :new, :create]
+  resources :shows, except: [:index, :destroy]
+  resources :show_listings, only: [:new, :create]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

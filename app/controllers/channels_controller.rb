@@ -1,4 +1,5 @@
 class ChannelsController < ApplicationController
+  
   def index
     @shows = Show.all
   end
